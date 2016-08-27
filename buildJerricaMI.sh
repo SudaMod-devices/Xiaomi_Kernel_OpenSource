@@ -123,8 +123,8 @@ exec_command ls $KERNEL_DIR/arch/arm/boot/dt.img
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 # copy modules to AnyKernel2/modules/
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-echo "***** Copying Modules to $AK2_DIR *****"
-exec_command cp `find . -name "*.ko"` $AK2_DIR/modules/
+######echo "***** Copying Modules to $AK2_DIR *****"
+######exec_command cp `find . -name "*.ko"` $AK2_DIR/modules/
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 # copy zImage and dt.img to boot_miui8_extracted
