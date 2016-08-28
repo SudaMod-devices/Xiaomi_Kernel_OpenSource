@@ -123,8 +123,10 @@ exec_command ls $KERNEL_DIR/arch/arm/boot/dt.img
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 # copy modules to AnyKernel2/modules/
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
-######echo "***** Copying Modules to $AK2_DIR *****"
-######exec_command cp `find . -name "*.ko"` $AK2_DIR/modules/
+echo "***** Copying wlan.ko to $AK2_DIR *****"
+exec_command cp $KERNEL_DIR/drivers/staging/prima/wlan.ko $AK2_DIR/modules/wlan.ko
+echo "***** Copying radio-iris-transport.ko to $AK2_DIR *****"
+exec_command cp $KERNEL_DIR/drivers/media/radio/radio-iris-transport.ko $AK2_DIR/modules/radio-iris-transport.ko
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 # copy zImage and dt.img to boot_miui8_extracted
